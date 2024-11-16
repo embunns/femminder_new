@@ -1,4 +1,3 @@
-
 // document.querySelector() is used to select an element from the document using its ID
 let captchaText = document.getElementById('captcha');
 var ctx = captchaText.getContext("2d");
@@ -73,4 +72,17 @@ refreshButton.addEventListener('click', function() {
     c = refreshArr.join('');
     ctx.fillText(refreshArr.join(''),captchaText.width/4, captchaText.height/2);
     output.innerHTML = "";
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+    const tooglePassword = document.querySelector('#tooglePassword');
+    const password = document.querySelector('#password');
+
+    tooglePassword.addEventListener('click', () => {
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+
+        tooglePassword.classList.toggle('bi-eye');
+        tooglePassword.classList.toggle('bi-eye-slash');
+    });
 });
