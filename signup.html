@@ -10,6 +10,7 @@
 </head>
 <body>
   <div class="container-fluid">
+    <header class="header-logo"><img src="assets/logo.png" alt="Logo" class="logo"></header>
     <div class="row vh-100">
       <div class="col-6 d-flex justify-content-center align-items-center leftside">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
@@ -70,12 +71,12 @@
                     <option value="woman">Woman</option>
                     <option value="man">Man</option>
                   </select>
-                  <div class="form-input">
+                <input type="text" name="captcha" placeholder="Type the code above..."><br>
+                <div class="form-input">
                     <label for="password"><b>Password</b></label><br>
                     <input type="password" id="password" name="password" placeholder="Enter your password..."><br>
                     <i class="bi bi-eye-slash" id="tooglePassword"></i>
                 </div>
-                <input type="text" name="captcha" placeholder="Type the code above..."><br>
             <a href="login.html" class="btn">Sign Up</a>
             <p id="btnsignup">Already have an account? <a href="login.html" class="highlight">Login</a></p>
         </div>

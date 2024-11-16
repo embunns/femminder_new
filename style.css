@@ -125,6 +125,23 @@ input:checked + .radio-tile{
     width: 1000px  ;
 }
 
+.logo {
+    position: absolute; /* Logo melayang */
+    top: 10px; /* Jarak dari atas */
+    left: 10px; /* Jarak dari kiri */
+    width: 180px; /* Ukuran logo */
+    height: auto; /* Menjaga proporsi gambar */
+    z-index: 1000; /* Agar di atas elemen lain */
+}
+
+.header-logo{
+    position: fixed;
+}
+
+.header-logo::-webkit-scrollbar{
+    background-color: #fff;
+}
+
 .leftside{
     background-color: #f8e6ee;
 }
