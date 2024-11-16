@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Femminder</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #FFC5D8;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 15px;
+            padding: 20px 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            width: 350px;
+        }
+
+        .container img {
+            width: 100px;
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #444;
+        }
+
+        h1 span {
+            color: #d32276;
+        }
+
+        p {
+            font-size: 14px;
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .roles {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .role {
+            width: 100px;
+            background-color: #ffe4eb;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .role:hover {
+            background-color: #fcb3c8;
+        }
+
+        .role img {
+            width: 50px;
+            height: auto;
+            margin-bottom: 5px;
+        }
+
+        .role span {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: #444;
+        }
+
+        .btn-next {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #d32276;
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .btn-next:hover {
+            background-color: #a91a5e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://via.placeholder.com/100?text=Avatar" alt="Avatar">
+        <h1>Hello <span>Femminder</span> Friends, Welcome!</h1>
+        <p>Choose a role to start the application!</p>
+        <div class="roles">
+            <div class="role">
+                <img src="https://via.placeholder.com/50?text=Admin" alt="Admin">
+                <span>Admin</span>
+            </div>
+            <div class="role">
+                <img src="https://via.placeholder.com/50?text=User" alt="User">
+                <span>User</span>
+            </div>
+        </div>
+        <a href="#" class="btn-next">Next</a>
+    </div>
+</body>
+</html>
