@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Reference</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #FFEAF2;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            background-color: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            width: 150%;
+            max-width: 1000px;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: bold;
+            color: #333;
+            margin-bottom: 5px;
+        }
+
+        h1 span {
+            font-size: 30px;
+        }
+
+        p {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            position: relative;
+        }
+
+        label {
+            font-size: 14px;
+            color: #333;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+            color: #333333;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #d32276;
+            box-shadow: 0 0 5px rgba(211, 34, 118, 0.3);
+        }
+
+        .dropdown {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #F7F9FC;
+            color: #333;
+            font-size: 14px;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .dropdown:after {
+            content: "▼";
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 12px;
+            color: #888;
+        }
+
+        .dropdown-options {
+            display: none;
+            position: absolute;
+            top: calc(100% + 5px);
+            left: 0;
+            right: 0;
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+        }
+
+        .dropdown-options label {
+            display: block;
+            padding: 10px;
+            font-size: 14px;
+            color: #333;
+            cursor: pointer;
+            border-bottom: 1px solid #f1f1f1;
+        }
+
+        .dropdown-options label:last-child {
+            border-bottom: none;
+        }
+
+        .dropdown-options label:hover {
+            background-color: #f9f9f9;
+        }
+
+        .dropdown-options input {
+            margin-right: 100px;
+        }
+
+        .dropdown.active + .dropdown-options {
+            display: block;
+        }
+
+        .btn-submit {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: white;
+            background-color: #d32276;
+            border: none;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-submit:hover {
+            background-color: #a91a5e;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1><span>👋</span> User Reference</h1>
+        <p>Please fill in the data below to access your account.</p>
+
+        <form>
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" placeholder="Enter your age...">
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight</label>
+                <input type="number" id="weight" placeholder="Enter your weight...">
+            </div>
+
+            <div class="form-group">
+                <label for="height">Height</label>
+                <input type="number" id="height" placeholder="Enter your height...">
+            </div>
+
+            <div class="form-group">
+                <label for="last-menstruation">Last Menstruation</label>
+                <input type="date" id="last-menstruation">
+            </div>
+
+            <div class="form-group">
+                <label for="symptoms">Select the symptoms you are experiencing:</label>
+                <div class="dropdown" onclick="toggleDropdown('symptoms')">Open</div>
+                <div class="dropdown-options">
+                    <label><input type="checkbox" value="Headache"> Headache</label>
+                    <label><input type="checkbox" value="Nauseous"> Nauseous</label>
+                    <label><input type="checkbox" value="Muscle Pain"> Muscle Pain</label>
+                    <label><input type="checkbox" value="Bloated"> Bloated</label>
+                    <label><input type="checkbox" value="Breast Pain"> Breast Pain</label>
+                    <label><input type="checkbox" value="Stomach Pain"> Stomach Pain</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="mood">Choose the mood you are experiencing:</label>
+                <div class="dropdown" onclick="toggleDropdown('mood')">Open</div>
+                <div class="dropdown-options" id="mood-options">
+                    <label><input type="radio" name="mood" value="Sad"> Sad</label>
+                    <label><input type="radio" name="mood" value="Anxious"> Anxious</label>
+                    <label><input type="radio" name="mood" value="Angry"> Angry</label>
+                    <label><input type="radio" name="mood" value="Happy"> Happy</label>
+                    <label><input type="radio" name="mood" value="Calm"> Calm</label>
+                </div>
+            </div>
+
+            <button type="submit" class="btn-submit">Submit</button>
+        </form>
+    </div>
+
+    <script>
+        function toggleDropdown(type) {
+            const dropdown = document.querySelector(`.dropdown[onclick="toggleDropdown('${type}')"]`);
+            const options = document.getElementById(`${type}-options`);
+            dropdown.classList.toggle('active');
+            options.classList.toggle('active');
+        }
+
+        window.addEventListener('click', function (e) {
+            const dropdowns = document.querySelectorAll('.dropdown');
+            const options = document.querySelectorAll('.dropdown-options');
+            dropdowns.forEach((dropdown, index) => {
+                if (!dropdown.contains(e.target) && !options[index].contains(e.target)) {
+                    dropdown.classList.remove('active');
+                    options[index].classList.remove('active');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
