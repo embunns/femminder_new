@@ -74,15 +74,19 @@ refreshButton.addEventListener('click', function() {
     output.innerHTML = "";
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-    const tooglePassword = document.querySelector('#tooglePassword');
-    const password = document.querySelector('#password');
 
-    tooglePassword.addEventListener('click', () => {
-        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-        password.setAttribute('type', type);
+//show password
+ // Ambil elemen DOM
+ const tooglePassword = document.querySelector('#tooglePassword');
+ const password = document.querySelector('#password');
 
-        tooglePassword.classList.toggle('bi-eye');
-        tooglePassword.classList.toggle('bi-eye-slash');
-    });
-});
+ // Tambahkan event listener untuk ikon
+ tooglePassword.addEventListener('click', () => {
+     // Ubah tipe input antara 'password' dan 'text'
+     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+     password.setAttribute('type', type);
+
+     // Ubah ikon mata
+     tooglePassword.classList.toggle('bi-eye');
+     tooglePassword.classList.toggle('bi-eye-slash');
+ });
