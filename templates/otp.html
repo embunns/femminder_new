@@ -273,8 +273,8 @@ input:checked + .radio-tile{
             <p>Enter the verification code we sent to</p>
             <p><span>XXX@gmail.com</span></p>
 
-            <input type="text" name="captcha" placeholder="Type the code here..."><br>
-            <a href="login.html" class="btn">Submit</a>
+            <input type="text" id="otp" name="otp" placeholder="Type the code here..."><br>
+            <a href="{{ url_for('login') }}" class="btn">Submit</a>
             <p id="btnsignup">Didn't get the code? <a class="highlight">Resend</a></p>
         </div>
       </div>

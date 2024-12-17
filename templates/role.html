@@ -103,17 +103,26 @@
         <img src="https://via.placeholder.com/100?text=Avatar" alt="Avatar">
         <h1>Hello <span>Femminder</span> Friends, Welcome!</h1>
         <p>Choose a role to start the application!</p>
-        <div class="roles">
-            <div class="role">
-                <img src="https://via.placeholder.com/50?text=Admin" alt="Admin">
-                <span>Admin</span>
+        <form action="/next" method="POST">
+            <div class="roles">
+                <div class="role">
+                    <input type="radio" id="admin" name="role" value="Admin">
+                    <label for="admin">
+                        <img src="https://via.placeholder.com/50?text=Admin" alt="Admin">
+                        <span>Admin</span>
+                    </label>
+                </div>
+                <div class="role">
+                    <input type="radio" id="user" name="role" value="User">
+                    <label for="user">
+                        <img src="https://via.placeholder.com/50?text=User" alt="User">
+                        <span>User</span>
+                    </label>
+                </div>
             </div>
-            <div class="role">
-                <img src="https://via.placeholder.com/50?text=User" alt="User">
-                <span>User</span>
-            </div>
-        </div>
-        <a href="#" class="btn-next">Next</a>
+            <button type="submit" class="btn-next">Next</button>
+        </form>
     </div>
 </body>
+
 </html>
