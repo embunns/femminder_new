@@ -145,6 +145,46 @@ input:checked + .radio-tile{
     margin: 5% 15%;
 }
 
+.form-otp{
+    margin: 5% 15%;
+    align-items: center;
+    text-align: center;
+}
+
+.form-otp input{
+    width: 100%;
+    padding-left: 20px;
+    height: 45px;
+    border-radius: 5px;
+    background-color: #ECF2F7;
+    border: none;
+    margin-top: 10px;
+}
+
+.form-otp .btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #E64078;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 30px;
+}
+
+.form-otp .btn:hover{
+    background-color:#c53062;
+    color: white;
+}
+
+.form-login #btnsignup{
+    text-align: center;
+    margin-top: 20px;
+}
+
 .form-input{
     margin-top: 5px;
 }
@@ -209,3 +249,5 @@ input:checked + .radio-tile{
 .captcha{
     margin-top: 20px;
 }
+
+/* dashboard */

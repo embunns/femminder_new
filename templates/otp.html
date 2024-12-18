@@ -4,251 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Page</title>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
-
-
-body {
-    margin: 0;
-    padding: 0;
-    font-family: 'poppins', sans-serif;
-    background-color: #E64078;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-
-.card h2{
-    text-align: center;
-    margin-top: 30px;
-    font-size: 4.4vh;
-    margin-bottom: 5px;
-}
-.highlight{
-    color: #E64078;
-    font-style: bold;
-    font-weight: 600;
-}
-
-.card p{
-    text-align: center;
-    font-size: 3vh;
-    margin-top: 5px;
-}
-  .container{
-    position: relative;
-    align-items: center;
-    display: flex;
-  }
-
-  .card{
-    position: absolute;
-    background-color: aliceblue;
-    width: 100%;
-    height: 450px;
-    margin-top: 280px;
-    border-radius: 50px 50px 0 0;
-  }
-
-.card .radio-tile-group{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.input-container{
-    position: relative;
-    /* height: 30rem; */
-    width: 15rem;
-    margin: 0.5rem;
-}
-
-.input-container input{
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    cursor: pointer;
-    z-index: 2;
-    opacity: 0;
-}
-
-.input-container .radio-tile{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    /* border: 2px solid #E64078; */
-    background: #f8e6ee;
-    border-radius: 30px;
-    padding: 1%;
-}
-
-.input-container .radio-tile label{
-    font-weight: 500;
-}
-
-input:checked + .radio-tile{
-    background-color: #E64078;
-    color: #f8e6ee;
-}
-
-.container img{
-    width: 78%;
-    margin-left: 10%;
-    margin-bottom: 5%;
-    z-index: -1;
-  }
-
-.card .btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #E64078;
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
-    text-align: center;
-    width: 50%;
-    border-radius: 10px;
-    color: #fff;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-top: 20px;
-    margin-left: 25%;
-}
-  
-  .btn:hover {
-    background-color: #c53062;
-  }
-  
-
-  .form-login p span {
-    color: #E64078;
-    font-weight: bold;
-}
-
-.containerstart .col{
-    align-items: center;
-    height: 0px;
-    width: 1000px  ;
-}
-
-.leftside{
-    background-color: #f8e6ee;
-}
-
-.rightside{
-    background-color: #fff;
-}
-
-.carousel-inner .carousel-margin img {
-    margin-left: 100px; /* Ganti 20px dengan nilai yang diinginkan */
-  }
-
-#margin-onboard1 img{
-    margin-left: 150px;
-}
-
-.text-carousel{
-    width: 60%;
-    text-align: center;
-    margin: 10px 0 30px 120px;
-}
-  
-.form-login{
-    margin: 5% 15%;
-}
-
-.form-input{
-    margin-top: 5px;
-}
-
-.form-login input{
-    width: 100%;
-    background-color: #fff;
-    padding-left: 20px;
-    height: 45px;
-    border-radius: 5px;
-    background-color: #ECF2F7;
-    border: none;
-    margin-top: 10px;
-}
-
-.form-login .btn{
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #E64078;
-    color: white;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-top: 30px;
-}
-
-.form-login .btn:hover{
-    background-color:#c53062;
-    color: white;
-}
-
-.form-login #btnsignup{
-    text-align: center;
-    margin-top: 20px;
-}
-
-.dropdown #btngender{
-    display: inline-block;
-    background-color: #ECF2F7;
-    color: black;
-    text-decoration: none;
-    text-align: center;
-    width: 100%;
-    border-radius: 10px;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-top: 30px;
-}
-.form-login {
-    margin: 5% 15%;
-    text-align: center; /* Centers inline elements like the image */
-}
-
-.form-login img {
-    display: block; /* Ensures the image behaves as a block element */
-    margin: 0 auto; /* Centers the block element horizontally */
-    max-width: 60%; /* Scales the image responsively */
-    height: auto; /* Maintains the aspect ratio */
-}
-    </style>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
   <div class="container-fluid">
+    <header class="header-logo"><img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo" class="logo"></header>
     <div class="row vh-100">
       <div class="col-6 d-flex justify-content-center align-items-center leftside">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" id="margin-onboard1">
-                <img src="assets/onboard1.png" class="d-block w-90" alt="...">
+                <img src="{{ url_for('static', filename='assets/onboard1.png') }}" class="d-block w-90" alt="...">
                 <div class="text-carousel">
                     <h4><b>Predict your menstrual date now!</b></h4>
                     <p>Get to know your body better with Femminder Accurately predict your menstrual schedule and stay ready at any time.</p>
                 </div>
               </div>
               <div class="carousel-item carousel-margin">
-                <img src="assets/onboard2.png" class="d-block w-90" alt="...">
+                <img src="{{ url_for('static', filename='assets/onboard2.png') }}" class="d-block w-90" alt="...">
                 <div class="text-carousel">
                     <h4><b>The right solution for your menstrual complaints!</b></h4>
                     <p>Explore articles specifically designed to answer your complaints. Simple, fast and relevant!</p>
                 </div>
               </div>
               <div class="carousel-item carousel-margin">
-                <img src="assets/onboard3.png" class="d-block w-90" alt="...">
+                <img src="{{ url_for('static', filename='assets/onboard3.png') }}" class="d-block w-90" alt="...">
                 <div class="text-carousel">
                     <h4><b>Get notifications for your predicted menstrual date!</b></h4>
                     <p>Intuitive design, timely notifications! Menstruation predictions are easy and practical!</p>
@@ -266,10 +47,9 @@ input:checked + .radio-tile{
           </div>
       </div>
       <div class="col-6 justify-content-center align-items-center rightside">
-        <div class="form-login">
+        <div class="form-otp">
             <h2>Email Verification</h2>
-            
-            <img src="assets/phone.png" class="Phone image" alt="...">
+            <img src="{{ url_for('static', filename='assets/phone.png') }}" class="Phone image" alt="...">
             <p>Enter the verification code we sent to</p>
             <p><span>XXX@gmail.com</span></p>
 

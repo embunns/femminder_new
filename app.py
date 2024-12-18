@@ -206,13 +206,17 @@ def resend_otp():
 
     return redirect(url_for('otp'))
 
-
-
 @app.route('/dashboard')
 def dashboard():
-    if "username" in session:
-        return render_template("dashboard.html", username=session['username'])
-    return redirect(url_for('dashboard'))
+    username = session.get('username')  # Mengambil username dari session jika ada
+    return render_template("dashboard.html", username=username)
+
+
+# @app.route('/dashboard')
+# def dashboard():
+#     if "username" in session:
+#         return render_template("dashboard.html", username=session['username'])
+#     return redirect(url_for('dashboard'))
 
 @app.route('/logout')
 def logout():

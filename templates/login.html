@@ -10,27 +10,27 @@
 </head>
 <body>
   <div class="container-fluid">
-    <header class="header-logo"><img src="assets/logo.png" alt="Logo" class="logo"></header>
+    <header class="header-logo"><img src="{{ url_for('static', filename='assets/logo.png') }}" alt="Logo" class="logo"></header>
     <div class="row vh-100">
       <div class="col-6 d-flex justify-content-center align-items-center leftside">
         <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active" id="margin-onboard1">
-                <img src="assets/onboard1.png" class="d-block w-90" alt="...">
+                <img src="{{ url_for('static', filename='assets/onboard1.png') }}" class="d-block w-90" alt="...">
                 <div class="text-carousel">
                     <h4><b>Predict your menstrual date now!</b></h4>
                     <p>Get to know your body better with Femminder Accurately predict your menstrual schedule and stay ready at any time.</p>
                 </div>
               </div>
               <div class="carousel-item carousel-margin">
-                <img src="assets/onboard2.png" class="d-block w-90" alt="...">
+                <img src="{{ url_for('static', filename='assets/onboard2.png') }}" class="d-block w-90" alt="...">
                 <div class="text-carousel">
                     <h4><b>The right solution for your menstrual complaints!</b></h4>
                     <p>Explore articles specifically designed to answer your complaints. Simple, fast and relevant!</p>
                 </div>
               </div>
               <div class="carousel-item carousel-margin">
-                <img src="assets/onboard3.png" class="d-block w-90" alt="...">
+                <img src="{{ url_for('static', filename='assets/onboard3.png') }}" class="d-block w-90" alt="...">
                 <div class="text-carousel">
                     <h4><b>Get notifications for your predicted menstrual date!</b></h4>
                     <p>Intuitive design, timely notifications! Menstruation predictions are easy and practical!</p>
