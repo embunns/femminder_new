@@ -75,7 +75,7 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            padding: 2rem;
+            padding: 4rem;
             background:rgb(255, 236, 241);
         }   
         
@@ -99,6 +99,7 @@
         }
         
         .hero-image img {
+            margin-left: 100px;
             width: 300px;
         }
 
@@ -184,13 +185,14 @@
             </ul>
         </nav>
         <div class="profile-info">
-            <img src="profile.jpg" alt="Profile Picture">
+            <img src="{{ url_for('static', filename='assets/user.png') }}" alt="Profile Picture">
             <p>Anila Dwi Lestari<br>20 years</p>
         </div>
     </header>
     <section class="hero">
         <div class="hero-content">
-            <h1>Menstrual Period <span>13 Days</span></h1>
+            <h1>Menstrual Period</h1>
+            <h1><span>13 Days</span></h1>
             <button class="button">Note Menstrual Periods</button>
         </div>
         <div class="hero-image">
