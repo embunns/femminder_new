@@ -218,6 +218,10 @@ def dashboard():
 #         return render_template("dashboard.html", username=session['username'])
 #     return redirect(url_for('dashboard'))
 
+@app.route('/profile')
+def profile():
+    return render_template("profile.html")
+
 @app.route('/logout')
 def logout():
     session.pop('username', None)

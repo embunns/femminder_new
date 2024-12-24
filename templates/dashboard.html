@@ -43,20 +43,23 @@
             padding: 0;
             margin: 0;
             display: flex;
+            font-weight: bold;
+            
         }
 
         nav li {
-            margin-left: 20px;
+            margin-left: 1100px;  
         }
 
         nav a {
             text-decoration: none;
-            color: #333;
+            color:#e53e6a;
         }
 
         .profile-info {
             display: flex;
             align-items: center;
+            
         }
 
         .profile-info img {
@@ -117,7 +120,7 @@
             border: 1px solid #ddd;
             border-radius: 5px;
             margin: 0 10px;
-            padding: 20px;
+            padding: 40px;
             width: 300px;
             text-align: center;
         }
@@ -146,10 +149,11 @@
 
         footer {
             background-color: #fff;
-            padding: 20px;
+            padding-left: 100px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            margin-bottom: 30px;
         }
 
         .footer-column {
@@ -166,11 +170,12 @@
         .social-media {
             display: flex;
             gap: 10px;
+            margin-right: 60px;
         }
 
         .social-media img {
-            width: 20px;
-            height: 20px;
+            width: 30px;
+            height: 30px;
         }
     </style>
 </head>
@@ -201,19 +206,19 @@
     </section>
     <div class="articles">
         <div class="article-card">
-            <img src="article1.jpg" alt="Article 1">
+            <img src="{{ url_for('static', filename='assets/onboard1.png') }}" alt="Article 1">
             <h3>OMG! Is Your Menstrual Period Late?</h3>
             <p>17 hours ago</p>
             <a href="#">Read More</a>
         </div>
         <div class="article-card">
-            <img src="article2.jpg" alt="Article 2">
+            <img src="{{ url_for('static', filename='assets/onboard2.png') }}" alt="Article 2">
             <h3>Overcome Menstrual Abdominal Pain With Just Dikos Ingredients!</h3>
             <p>17 hours ago</p>
             <a href="#">Read More</a>
         </div>
         <div class="article-card">
-            <img src="article3.jpg" alt="Article 3">
+            <img src="{{ url_for('static', filename='assets/onboard3.png') }}" alt="Article 3">
             <h3>Understanding Your Menstrual Cycle</h3>
             <p>17 hours ago</p>
             <a href="#">Read More</a>
@@ -239,9 +244,9 @@
             <a href="#">Privacy policy</a>
         </div>
         <div class="social-media">
-            <img src="facebook-icon.png" alt="Facebook">
-            <img src="twitter-icon.png" alt="Twitter">
-            <img src="instagram-icon.png" alt="Instagram">
+            <img src="{{ url_for('static', filename='assets/twitter.png') }}" alt="Facebook">
+            <img src="{{ url_for('static', filename='assets/facebook.png') }}" alt="Twitter">
+            <img src="{{ url_for('static', filename='assets/instagram.png') }}" alt="Instagram">
         </div>
     </footer>
 </body>

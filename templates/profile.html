@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #f9e0ee, #ffffff);
+            color: #333;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .profile-header {
+            text-align: center;
+        }
+
+        .profile-header img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .profile-header .edit-icon {
+            position: relative;
+            display: inline-block;
+            margin-top: -25px;
+            background: #ff79c6;
+            color: #fff;
+            border-radius: 50%;
+            padding: 5px;
+            cursor: pointer;
+        }
+
+        form {
+            margin-top: 20px;
+        }
+
+        form .form-group {
+            margin-bottom: 15px;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        form input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        form input[type="password"] {
+            font-family: 'Courier New', Courier, monospace;
+        }
+
+        .buttons {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .buttons button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .buttons .edit {
+            background: #ff79c6;
+            color: #fff;
+        }
+
+        .buttons .logout {
+            background: #ddd;
+            color: #333;
+        }
+
+        footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        footer a {
+            color: #ff79c6;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-header">
+            <img src="https://via.placeholder.com/100" alt="Profile Picture">
+            <div class="edit-icon">&#9998;</div>
+        </div>
+
+        <form>
+            <div class="form-group">
+                <label for="full-name">Full Name</label>
+                <input type="text" id="full-name" value="Anila Dwi Lestari" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" value="aniladwi@gmail.com" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" value="AnilaDwi" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="gender">Gender</label>
+                <input type="text" id="gender" value="Woman" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="age">Age</label>
+                <input type="number" id="age" value="20" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="weight">Weight</label>
+                <input type="number" id="weight" value="55" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="height">Height</label>
+                <input type="number" id="height" value="162" disabled>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" value="******" disabled>
+            </div>
+
+            <div class="buttons">
+                <button class="edit">Edit Data</button>
+                <button class="logout">Logout</button>
+            </div>
+        </form>
+
+        <footer>
+            <p>FemMinder &copy; 2024. All rights reserved.</p>
+        </footer>
+    </div>
+</body>
+</html>
