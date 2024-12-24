@@ -218,9 +218,9 @@ def dashboard():
 #         return render_template("dashboard.html", username=session['username'])
 #     return redirect(url_for('dashboard'))
 
-@app.route('/profile')
+@app.route('/profileUser')
 def profile():
-    return render_template("profile.html")
+    return render_template("profileUser.html")
 
 @app.route('/logout')
 def logout():
