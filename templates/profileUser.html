@@ -204,7 +204,7 @@
     <div class="container">
         <div class="profile-header">
             <img src="https://via.placeholder.com/100" alt="Profile Picture">
-            <div class="edit-icon">&#9998;</div>
+            <div id="edit-icon" class="edit-icon">&#9998;</div>
         </div>
 
         <form>
@@ -281,27 +281,46 @@
     </footer>
     <script>
         const editSaveButton = document.getElementById('edit-save-button');
-const logoutButton = document.getElementById('logout-button');
-const inputs = document.querySelectorAll('form input');
-let isEditing = false;
+    const logoutButton = document.getElementById('logout-button');
+    const editIcon = document.getElementById('edit-icon');
+    const inputs = document.querySelectorAll('form input');
+    let isEditing = false;
 
-editSaveButton.addEventListener('click', (event) => {
-    event.preventDefault(); // Mencegah reload halaman
+    editSaveButton.addEventListener('click', (event) => {
+        event.preventDefault(); // Mencegah reload halaman
 
-    if (!isEditing) {
-        // Masuk ke mode edit
-        inputs.forEach(input => input.removeAttribute('disabled'));
-        editSaveButton.textContent = 'Save';
-        logoutButton.style.display = 'none'; // Sembunyikan tombol Logout
-        isEditing = true;
-    } else {
-        // Keluar dari mode edit (simpan perubahan)
-        inputs.forEach(input => input.setAttribute('disabled', 'disabled'));
-        editSaveButton.textContent = 'Edit Data';
-        logoutButton.style.display = 'block'; // Tampilkan kembali tombol Logout
-        isEditing = false;
-    }
-});
+        if (!isEditing) {
+            // Masuk ke mode edit
+            inputs.forEach(input => input.removeAttribute('disabled'));
+            editSaveButton.textContent = 'Save';
+            logoutButton.style.display = 'none'; // Sembunyikan tombol Logout
+            isEditing = true;
+        } else {
+            // Keluar dari mode edit (simpan perubahan)
+            inputs.forEach(input => input.setAttribute('disabled', 'disabled'));
+            editSaveButton.textContent = 'Edit Data';
+            logoutButton.style.display = 'block'; // Tampilkan kembali tombol Logout
+            isEditing = false;
+        }
+    });
+
+    editIcon.addEventListener('click', (event) => {
+        event.preventDefault(); // Mencegah reload halaman
+
+        if (!isEditing) {
+            // Masuk ke mode edit
+            inputs.forEach(input => input.removeAttribute('disabled'));
+            editSaveButton.textContent = 'Save';
+            logoutButton.style.display = 'none'; // Sembunyikan tombol Logout
+            isEditing = true;
+        } else {
+            // Keluar dari mode edit (simpan perubahan)
+            inputs.forEach(input => input.setAttribute('disabled', 'disabled'));
+            editSaveButton.textContent = 'Edit Data';
+            logoutButton.style.display = 'block'; // Tampilkan kembali tombol Logout
+            isEditing = false;
+        }
+    });
 
     </script>
 </body>
