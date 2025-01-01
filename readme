@@ -1,6 +1,8 @@
 Femminder adalah perangkat lunak yang memiliki tujuan untuk membantu perempuan dalam memprediksi dan mengingatkan siklus menstruasi mereka. Selain sebagai platform pengingat, Femminder memberikan rekomendasi artikel berdasarkan keluhan user. Pada platform ini, terdapat 2 role yang bisa mengakses website Femminder, diantaranya adalah sebagai berikut:
+
 1. Admin (Pada website Femminder admin merupakan pengguna yang memiliki hak istimewa dan kontrol penuh terhadap pengelolaan website. Dalam website Femminder peran admin yaitu mengelola artikel dimana admin bisa menambahkan artikel, mengedit artikel, menghapus artikel, serta mencari artikel)
 2. User (User adalah peran utama dalam website Femminder, dimana user memiliki peran untuk mengakses semua fitur website Femminder, seperti login, signup, mengedit profile, input keluhan, input tanggal menstruasi, membaca rekomendasi artikel, melihat prediksi menstruasi, melihat histori menstruasi, dan logout website)
+
 Fitur Femminder :
 1. Login
 2. Sign Up
